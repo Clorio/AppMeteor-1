@@ -1,3 +1,4 @@
+// Crud eleves
 Template.home.events({ // Listeners
     'submit form': function(e){
         e.preventDefault(); // Annule l'évènement s'il est annulable, sans stopper sa propagation. (pour ne pas réfraichir)
