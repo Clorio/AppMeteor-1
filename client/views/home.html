@@ -3,41 +3,47 @@
         <div id="page-wrapper">
 
             <div class="container">
+                <div class="menu-app">
+                    <ul class="text">
+                    <li>Examen</li>
+                    <li>Notes</li>
+                    <li>Elèves</li>
+                </ul></div>
 
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Gestion de donnée</h1>
+                        <h1 class="page-header">Tableau de notes</h1>
                         <ol class="breadcrumb">
                             <li class="active">
                                 <i class="fa fa-dashboard">Tableau de bord</i>
                             </li>
-                            <li class="active">Donnée</li>
+                            <li class="active">Elève de Web2</li>
                         </ol>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-lg-5">
                         <form role="form" class="form-horizontal">
-                            <div class="form-groug">
+                            <div class="form-group">
                                 <label class="control-label col-sm-3" for="title">
                                     Prenom <span style="color:red">*</span>
                                 </label>
-                                <div class="col-sm-9">
+                                <div class="col-sm-8">
                                     <input type="text" value="{{name}}" name="name" id="name" class="form-control input-sm" placeholder="Prenom de eleve">
                                 </div>
                             </div>
 
-                            <div class="form-groug">
+                            <div class="form-group">
                                 <label class="control-label col-sm-3" for="title">
-                                    Prenom <span style="color:red">*</span>
+                                    Nom <span style="color:red">*</span>
                                 </label>
-                                <div class="col-sm-9">
+                                <div class="col-sm-8">
                                     <input type="text" value="{{lastname}}" name="lastname" id="lastname" class="form-control input-sm" placeholder="Nom de eleve">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label col-sm-3" for="description">
-                                    Description <span style="color:red">*</span></label>
-                                <div class="col-sm-9">
+                                    Appréciation <span style="color:red">*</span></label>
+                                <div class="col-sm-8">
                                     <textarea name="description" class="form-control">{{description}}</textarea>
                                 </div>
                             </div>
@@ -57,7 +63,7 @@
                                     <th class="text-center" style="width:40%">Prenom</th>
                                     <th class="text-center" style="width:40%">Nom</th>
                                     <th class="text-center" style="width:40%">Description</th>
-                                    <th class="text-center" style="width:10%" colspan="2">Outils</th>
+                                    <th class="text-center" style="width:10%" colspan="2">Param</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -66,7 +72,7 @@
                                             <td>{{name}}</td>
                                             <td>{{lastname}}</td>
                                             <td>{{description}}</td>
-                                            <td><a href="/update/{{_id}}">Edit</a>|<a id="remove" href="#">Delete</a></td>
+                                            <td><a href="/update/{{_id}}">Edit</a>|<a id="remove" href="#">Suppr</a></td>
                                         </tr>
                                     {{/each}}
                                 </tbody>
