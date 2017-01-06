@@ -1,11 +1,13 @@
 Template.home.events({ // Listeners
     'submit form': function(e){
         e.preventDefault(); // Annule l'évènement s'il est annulable, sans stopper sa propagation. (pour ne pas réfraichir)
-        let title = e.target.title.value;
+        let name = e.target.name.value;
+        let lastname = e.target.lastname.value;
         let description = e.target.description.value;
 
         let obj = {
-            title : title,
+            name : name,
+            lastname : lastname,
             description : description
         };
         if(this._id){
@@ -24,5 +26,5 @@ Template.home.helpers({ // Controllers
     // Obtient la donnée dans la mongoDB
     getData : function(){
         return crud.find();
-    }
+    },
 });

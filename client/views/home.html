@@ -21,7 +21,16 @@
                                     Prenom <span style="color:red">*</span>
                                 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" value="{{title}}" name="title" id="title" class="form-control input-sm" placeholder="Nom eleve">
+                                    <input type="text" value="{{name}}" name="name" id="name" class="form-control input-sm" placeholder="Prenom de eleve">
+                                </div>
+                            </div>
+
+                            <div class="form-groug">
+                                <label class="control-label col-sm-3" for="title">
+                                    Prenom <span style="color:red">*</span>
+                                </label>
+                                <div class="col-sm-9">
+                                    <input type="text" value="{{lastname}}" name="lastname" id="lastname" class="form-control input-sm" placeholder="Nom de eleve">
                                 </div>
                             </div>
 
@@ -46,6 +55,7 @@
                                 <thead>
                                 <tr>
                                     <th class="text-center" style="width:40%">Prenom</th>
+                                    <th class="text-center" style="width:40%">Nom</th>
                                     <th class="text-center" style="width:40%">Description</th>
                                     <th class="text-center" style="width:10%" colspan="2">Outils</th>
                                 </tr>
@@ -53,9 +63,10 @@
                                 <tbody>
                                 {{#each getData}}
                                         <tr>
-                                            <td>{{title}}</td>
+                                            <td>{{name}}</td>
+                                            <td>{{lastname}}</td>
                                             <td>{{description}}</td>
-                                            <td><a id="remove" href="#">Delete</a>|<a href="/update/{{_id}}">Edit</a></td>
+                                            <td><a href="/update/{{_id}}">Edit</a>|<a id="remove" href="#">Delete</a></td>
                                         </tr>
                                     {{/each}}
                                 </tbody>
